@@ -14,7 +14,7 @@ export function Header() {
       <Row gap="2" alignItems="center">
         <ThemeButton />
         <Button variant="quiet" asChild>
-          <Link href="https://github.com/umami-software/react-zen" target="_blank">
+          <Link href="https://github.com/entro314-labs/entro-zen)" target="_blank">
             <Icon>
               <Github />
             </Icon>

@@ -1,0 +1,149 @@
+# Development files
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build artifacts (keep dist/ for distribution)
+.next/
+out/
+build/
+!dist/
+
+# Dependencies
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist-nuxt
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Source files (only dist should be distributed)
+src/
+public/
+pages/
+components/
+styles/
+assets/
+
+# Config files (keep for reference)
+# tsconfig.json, package.json, README.md, LICENSE should be included
+
+# Build scripts
+esbuild.mjs
+rollup.config.js
+css.mjs
+tsup.config.js
+
+# Development config
+next.config.mjs
+tailwind.config.js
+postcss.config.js
+.eslintrc.js
+.prettierrc
+.stylelintrc
+
+# Test files
+__tests__/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+cypress/
+
+# Documentation (README and LICENSE should be included)
+docs/
+documentation/
+
+# Git files
+.gitignore
+.gitattributes
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Husky and lint-staged
+.husky/
