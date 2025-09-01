@@ -5,8 +5,8 @@ export function Footer() {
     <Box as="footer" paddingY="8">
       <Text align="center" as="div">
         Built by{' '}
-        <a href="https://entrolytics.click?ref=zen">
-          <strong>umami</strong>
+        <a href="https://entrolytics.click?ref=entro-zen">
+          <strong>entrolytics</strong>
         </a>
       </Text>
     </Box>

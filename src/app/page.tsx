@@ -11,7 +11,7 @@ export default function RootPage() {
           <Link href="/docs">Get started</Link>
         </Button>
         <Button asChild>
-          <Link href="https://github.com/umami-software/react-zen">View source</Link>
+          <Link href="https://github.com/entro314-labs/entro-zen">View source</Link>
         </Button>
       </Row>
     </Column>

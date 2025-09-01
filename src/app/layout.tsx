@@ -25,8 +25,8 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && (
           <Script
             defer
-            data-website-id="b12b8a02-b6eb-413d-b9aa-af43b442487f"
-            data-domains="zen.umami.is"
+            data-website-id=""
+            data-domains="entro-zen.entrolytics.click"
             src="/a/script.js"
           />
         )}
