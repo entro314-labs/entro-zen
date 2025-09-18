@@ -14,9 +14,10 @@ import styles from './DataTable.module.css';
 
 export interface DataTableProps extends TableProps {
   data?: any[];
+  rowKey?: string | ((row: any) => string);
 }
 
-export function DataTable({ data = [], className, children, ...props }: DataTableProps) {
+export function DataTable({ data = [], className, children, rowKey, ...props }: DataTableProps) {
   // We must map an id for react-aria
   const items =
     data.length && data?.[0]?.id === undefined ? data.map((row, id) => ({ ...row, id })) : data;
@@ -51,8 +52,25 @@ export function DataTable({ data = [], className, children, ...props }: DataTabl
       </TableHeader>
       <TableBody>
         {items.map((row, index) => {
+          // Generate a proper key for the row
+          let key: string
+          if (rowKey) {
+            if (typeof rowKey === 'function') {
+              key = rowKey(row)
+            } else {
+              key = row[rowKey]
+            }
+            // Fallback if key is null/undefined
+            if (!key) {
+              console.warn('DataTable: rowKey returned null/undefined for row:', row)
+              key = `fallback-${index}`
+            }
+          } else {
+            key = row.id || index.toString()
+          }
+
           return (
-            <TableRow key={index} style={{ gridTemplateColumns }}>
+            <TableRow key={key} style={{ gridTemplateColumns }}>
               {columns?.map(({ id, as, hidden, className, children, ...cellProps }) => {
                 if (hidden) {
                   return null;
