@@ -27,7 +27,11 @@ interface TableCellProps extends CellProps {
 
 function Table({ children, className, ...props }: TableProps) {
   return (
-    <AriaTable aria-label="Table" {...props} className={classNames(styles.table, className)}>
+    <AriaTable
+      aria-label="Table"
+      {...props}
+      className={classNames(styles.table, className)}
+    >
       {children}
     </AriaTable>
   );
@@ -79,7 +83,10 @@ function TableColumn({ children, className, align, ...props }: TableColumnProps)
 
 function TableCell({ children, className, align, ...props }: TableCellProps) {
   return (
-    <Cell {...props} className={classNames(styles.cell, className, align && styles[align])}>
+    <Cell
+      {...props}
+      className={classNames(styles.cell, className, align && styles[align])}
+    >
       {children}
     </Cell>
   );
