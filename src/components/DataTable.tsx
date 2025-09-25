@@ -14,13 +14,18 @@ import styles from './DataTable.module.css';
 
 export interface DataTableProps extends TableProps {
   data?: any[];
-  rowKey?: string | ((row: any) => string);
+  rowKey?: string | ((row: any, index: number) => string);
 }
 
 export function DataTable({ data = [], className, children, rowKey, ...props }: DataTableProps) {
+  // Ensure data is always an array before processing
+  const safeData = Array.isArray(data) ? data : []
+
   // We must map an id for react-aria
   const items =
-    data.length && data?.[0]?.id === undefined ? data.map((row, id) => ({ ...row, id })) : data;
+    safeData.length && safeData?.[0]?.id === undefined
+      ? safeData.map((row, id) => ({ ...row, id }))
+      : safeData;
 
   const widths: string[] = [];
 
@@ -54,19 +59,28 @@ export function DataTable({ data = [], className, children, rowKey, ...props }: 
         {items.map((row, index) => {
           // Generate a proper key for the row
           let key: string
-          if (rowKey) {
-            if (typeof rowKey === 'function') {
-              key = rowKey(row)
+
+          try {
+            if (rowKey) {
+              if (typeof rowKey === 'function') {
+                key = rowKey(row, index) // Also pass index to function for fallback
+              } else {
+                key = row?.[rowKey] // Safe property access
+              }
+              // Fallback if key is null/undefined
+              if (!key || key === 'undefined' || key === 'null') {
+                console.warn('DataTable: rowKey returned invalid value for row:', row)
+                key = `fallback-${index}-${Date.now()}`
+              }
             } else {
-              key = row[rowKey]
+              key = row?.id || `item-${index}`
             }
-            // Fallback if key is null/undefined
-            if (!key) {
-              console.warn('DataTable: rowKey returned null/undefined for row:', row)
-              key = `fallback-${index}`
-            }
-          } else {
-            key = row.id || index.toString()
+
+            // Ensure key is always a string
+            key = String(key)
+          } catch (error) {
+            console.error('DataTable: Error generating row key:', error)
+            key = `error-fallback-${index}-${Date.now()}`
           }
 
           return (

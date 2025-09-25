@@ -69,7 +69,7 @@ export function List({
         style={{ ...style, ...getHighlightColor(highlightColor) }}
       >
         {children ||
-          items?.map(item => {
+          (Array.isArray(items) ? items : [])?.map(item => {
             const id = item[idProperty] || item.toString();
             const label = item[labelProperty] || item.toString();
 
