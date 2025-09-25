@@ -22,8 +22,9 @@ export function DataTable({ data = [], className, children, rowKey, ...props }: 
   const safeData = Array.isArray(data) ? data : []
 
   // We must map an id for react-aria
+  // Check if items need IDs - either array is empty or first item lacks a valid id
   const items =
-    safeData.length && safeData?.[0]?.id === undefined
+    safeData.length === 0 || !safeData[0]?.id
       ? safeData.map((row, id) => ({ ...row, id }))
       : safeData;
 
