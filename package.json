@@ -1,6 +1,6 @@
 {
   "name": "@entro314labs/entro-zen",
-  "version": "0.177.3",
+  "version": "0.177.4",
   "description": "Modern, minimalist React component library based on react-zen from umami project",
   "author": "Entro314 Labs <hey@entrolytics.click>",
   "license": "MIT",
@@ -49,6 +49,7 @@
     "@internationalized/date": "^3.10.0",
     "@react-aria/focus": "^3.21.2",
     "@react-spring/web": "^10.0.3",
+    "@svgr/rollup": "^8.1.0",
     "classnames": "^2.5.1",
     "glob": "^11.0.3",
     "highlight.js": "^11.11.1",
