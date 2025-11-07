@@ -39,7 +39,7 @@ export default {
     },
   ],
   plugins: [
-    del({ targets: 'dist/*', runOnce: true }),
+    del({ targets: ['dist/*.js', 'dist/*.mjs', 'dist/*.css', 'dist/*.map'], runOnce: true }),
     copy({ targets: [{ src: 'src/styles/zen.css', dest: 'dist' }] }),
     postcss({
       extract: 'styles.css',
