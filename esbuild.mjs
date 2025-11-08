@@ -28,7 +28,7 @@ const nullImportPlugin = ({ matches = [] }) => ({
 const config = {
   entryPoints: ['src/components/index.ts'],
   bundle: true,
-  external: ['react', 'react-dom', 'react-jsx/runtime'],
+  external: ['react', 'react-dom', 'react/jsx-runtime'],
   jsx: 'automatic',
   plugins: [
     commonjs(),
