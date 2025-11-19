@@ -27,7 +27,7 @@ export function Icon({
   className,
   children,
   ...props
-}: IconProps & HTMLAttributes<HTMLElement>) {
+}: IconProps) {
   const [classes, styleProps] = useDesignProps({
     strokeColor,
     fillColor,

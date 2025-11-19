@@ -26,6 +26,7 @@ export interface SelectProps extends AriaSelectProps<HTMLSelectElement> {
   allowSearch?: boolean;
   searchValue?: string;
   searchDelay?: number;
+  isFullscreen?: boolean;
   onSearch?: (value: string) => void;
   onChange?: (e: any) => void;
   buttonProps?: ButtonProps;
@@ -45,6 +46,7 @@ export function Select({
   allowSearch,
   searchValue,
   searchDelay,
+  isFullscreen,
   onSearch,
   onSelectionChange,
   onChange,
@@ -95,7 +97,7 @@ export function Select({
           </Icon>
         </div>
       </Button>
-      <Popover {...popoverProps} onOpenChange={handleOpenChange}>
+      <Popover {...popoverProps} onOpenChange={handleOpenChange} isFullscreen={isFullscreen}>
         <div className={styles.list}>
           {allowSearch && (
             <SearchField
@@ -111,6 +113,7 @@ export function Select({
           <List
             {...listProps}
             items={items}
+            isFullscreen={isFullscreen}
             style={{ ...listProps?.style, display: isLoading ? 'none' : undefined }}
           >
             {children}

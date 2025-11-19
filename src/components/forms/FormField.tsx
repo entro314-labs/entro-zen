@@ -3,7 +3,9 @@
 import { cloneElement, HTMLAttributes, Children } from 'react';
 import { useFormContext, RegisterOptions, UseFormReturn, FieldValues } from 'react-hook-form';
 import classNames from 'classnames';
+import { useFieldId } from '@/components/hooks/useFieldId';
 import { FormController } from './FormController';
+import { Label } from '../Label';
 import styles from './FormField.module.css';
 
 export interface FormFieldProps extends HTMLAttributes<HTMLDivElement>, Partial<UseFormReturn> {
@@ -15,6 +17,7 @@ export interface FormFieldProps extends HTMLAttributes<HTMLDivElement>, Partial<
 }
 
 export function FormField({
+  id,
   name,
   description,
   label,
@@ -23,12 +26,14 @@ export function FormField({
   children,
   ...props
 }: FormFieldProps) {
+  const fieldId = useFieldId(id);
   const context = useFormContext();
   const { control } = context;
   const { invalid, error } = context.getFieldState(name);
 
   return (
     <div {...props} className={classNames(styles.input, className)}>
+      {label && <Label htmlFor={fieldId}>{label}</Label>}
       <FormController name={name} control={control} rules={rules}>
         {({ field }) => {
           return Children.map(
@@ -37,7 +42,7 @@ export function FormField({
               if (!child) {
                 return null;
               }
-              return cloneElement(child, { ...field, label: child?.props?.label || label });
+              return cloneElement(child, { ...field, id: fieldId, label: child?.props?.label || label });
             },
           );
         }}

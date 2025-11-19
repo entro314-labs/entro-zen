@@ -39,8 +39,10 @@
 }
 
 .title {
-  color: var(--font-color);
+  color: var(--font-color-muted);
+  font-size: var(--font-size-1);
   font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
 }
 
 .clickable {

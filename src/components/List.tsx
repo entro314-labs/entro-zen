@@ -15,6 +15,7 @@ import classNames from 'classnames';
 import { Icon } from '@/components/Icon';
 import { Label } from '@/components/Label';
 import { Check } from '@/components/icons';
+import { useFieldId } from '@/components/hooks/useFieldId';
 import { getHighlightColor } from '@/lib/styles';
 import styles from './List.module.css';
 
@@ -25,18 +26,21 @@ export interface ListProps extends ListBoxProps<any> {
   separatorProperty?: string;
   highlightColor?: string;
   showCheckmark?: boolean;
+  isFullscreen?: boolean;
   label?: string;
   value?: string[];
   onChange?: (value: string[]) => void;
 }
 
 export function List({
-  items,
+  id,
+  items = [],
   idProperty = 'id',
   labelProperty = 'label',
-  separatorProperty = 'separatpr',
+  separatorProperty = 'separator',
   highlightColor,
   showCheckmark = true,
+  isFullscreen,
   label,
   value,
   onChange,
@@ -54,17 +58,24 @@ export function List({
       onChange?.([...keys].map(String));
     }
   };
+  const fieldId = useFieldId(id);
 
   return (
     <>
-      {label && <Label>{label}</Label>}
+      {label && <Label htmlFor={fieldId}>{label}</Label>}
       <ListBox
+        id={fieldId}
         aria-label="list"
         {...props}
         selectedKeys={value || selectedKeys}
         defaultSelectedKeys={value || defaultSelectedKeys}
         items={items}
-        className={classNames(styles.list, className, !showCheckmark && styles.hideCheckmark)}
+        className={classNames(
+          styles.list,
+          className,
+          !showCheckmark && styles.hideCheckmark,
+          isFullscreen && styles.fullscreen,
+        )}
         onSelectionChange={handleSelectionChange}
         style={{ ...style, ...getHighlightColor(highlightColor) }}
       >

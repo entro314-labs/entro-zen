@@ -13,6 +13,7 @@ build/
 
 # Dependencies
 node_modules/
+react-zen patches/
 
 # IDE and editor files
 .vscode/
