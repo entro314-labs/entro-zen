@@ -1,6 +1,6 @@
 {
   "name": "@entro314labs/entro-zen",
-  "version": "0.178.6",
+  "version": "0.178.8",
   "description": "Modern, minimalist React component library based on react-zen from umami project",
   "author": "Entro314 Labs <hey@entrolytics.click>",
   "license": "MIT",
@@ -94,7 +94,7 @@
     "prettier": "^3.6.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "rollup": "^4.53.2",
+    "rollup": "^4.53.3",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-delete": "^3.0.1",
     "rollup-plugin-dts": "^6.2.3",
