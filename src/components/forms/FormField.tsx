@@ -1,3 +1,5 @@
+'use client';
+
 import { cloneElement, HTMLAttributes, Children } from 'react';
 import { useFormContext, RegisterOptions, UseFormReturn, FieldValues } from 'react-hook-form';
 import classNames from 'classnames';

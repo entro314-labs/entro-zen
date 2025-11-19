@@ -1,3 +1,5 @@
+'use client';
+
 import { FieldValues, useFormContext } from 'react-hook-form';
 import { PressEvent } from 'react-aria-components';
 import { Button, ButtonProps } from '../Button';

@@ -1,3 +1,5 @@
+'use client';
+
 import { HTMLAttributes, ReactNode } from 'react';
 import { FieldValues, RegisterOptions, useFieldArray, useFormContext } from 'react-hook-form';
 import classNames from 'classnames';

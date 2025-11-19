@@ -11,29 +11,7 @@ import crypto from 'node:crypto';
 
 const md5 = str => crypto.createHash('md5').update(str).digest('hex');
 
-const external = [
-  'react',
-  'react-dom',
-  'react/jsx-runtime',
-  '@internationalized/date',
-  '@react-aria/focus',
-  '@react-spring/web',
-  'classnames',
-  'highlight.js',
-  'lucide-react',
-  'react-aria-components',
-  'react-hook-form',
-  'react-icons',
-  'react-icons/fa',
-  'react-icons/fa6',
-  'react-icons/fi',
-  'react-icons/md',
-  'react-icons/ri',
-  'react-icons/tb',
-  'thenby',
-  'zustand',
-  'zustand/shallow',
-];
+const external = ['react', 'react-dom', 'react/jsx-runtime'];
 
 const customResolver = resolve({
   extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -53,11 +31,16 @@ export default {
       file: 'dist/index.js',
       format: 'cjs',
       sourceMap: true,
+      interop: 'auto',
+      exports: 'named',
+      banner: `'use client';`,
     },
     {
       file: 'dist/index.mjs',
       format: 'es',
       sourceMap: true,
+      interop: 'auto',
+      banner: `'use client';`,
     },
   ],
   plugins: [
@@ -83,8 +66,13 @@ export default {
       entries: [{ find: /^@/, replacement: path.resolve('./src') }],
       customResolver,
     }),
-    resolve(),
-    commonjs(),
+    resolve({
+      dedupe: ['react', 'react-dom'],
+    }),
+    commonjs({
+      requireReturnsDefault: 'auto',
+      esmExternals: true,
+    }),
     esbuild(),
   ],
   external,
