@@ -11,7 +11,29 @@ import crypto from 'node:crypto';
 
 const md5 = str => crypto.createHash('md5').update(str).digest('hex');
 
-const external = ['react', 'react-dom', 'react/jsx-runtime'];
+const external = [
+  'react',
+  'react-dom',
+  'react/jsx-runtime',
+  '@internationalized/date',
+  '@react-aria/focus',
+  '@react-spring/web',
+  'classnames',
+  'highlight.js',
+  'lucide-react',
+  'react-aria-components',
+  'react-hook-form',
+  'react-icons',
+  'react-icons/fa',
+  'react-icons/fa6',
+  'react-icons/fi',
+  'react-icons/md',
+  'react-icons/ri',
+  'react-icons/tb',
+  'thenby',
+  'zustand',
+  'zustand/shallow',
+];
 
 const customResolver = resolve({
   extensions: ['.js', '.jsx', '.ts', '.tsx'],
