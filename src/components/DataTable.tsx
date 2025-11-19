@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import { Children, createElement, HTMLAttributes, ReactElement, ReactNode } from 'react';
 import { TableProps } from 'react-aria-components';
+import { Grid } from '@/components/Grid';
+import { DataCard } from '@/components/DataCard';
 import {
   Table,
   TableHeader,
@@ -15,9 +17,17 @@ import styles from './DataTable.module.css';
 export interface DataTableProps extends TableProps {
   data?: any[];
   rowKey?: string | ((row: any, index: number) => string);
+  displayMode?: 'table' | 'cards';
 }
 
-export function DataTable({ data = [], className, children, rowKey, ...props }: DataTableProps) {
+export function DataTable({
+  data = [],
+  displayMode = 'table',
+  className,
+  children,
+  rowKey,
+  ...props
+}: DataTableProps) {
   // Ensure data is always an array before processing
   const safeData = Array.isArray(data) ? data : []
 
@@ -40,6 +50,25 @@ export function DataTable({ data = [], className, children, rowKey, ...props }: 
   })?.filter(n => n);
 
   const gridTemplateColumns = widths.join(' ');
+
+  if (displayMode === 'cards') {
+    return (
+      <Grid gap="6" width="100%">
+        {items.map((row, index) => {
+          const cardData = columns
+            ?.filter(({ hidden }) => !hidden)
+            .map(({ id, label, children }) => {
+              const value =
+                typeof children === 'function' ? children(row, index) : (children ?? row[id]);
+
+              return { id, label, value };
+            });
+
+          return <DataCard key={row.id} data={cardData} />;
+        })}
+      </Grid>
+    );
+  }
 
   return (
     <Table {...props} className={classNames(styles.datatable, className)}>
