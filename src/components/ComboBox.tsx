@@ -9,7 +9,7 @@ import {
   PopoverProps,
 } from 'react-aria-components';
 import classNames from 'classnames';
-import { Chevron } from '@/components/icons';
+import { ChevronDown } from '@/components/icons';
 import { List, ListItem, ListProps } from './List';
 import { Icon } from './Icon';
 import { Grid } from './Grid';
@@ -41,7 +41,7 @@ export function ComboBox({
         <Input className={styles.input} />
         <Button className={styles.button}>
           <Icon aria-hidden="true" rotate={90} size="sm">
-            <Chevron />
+            <ChevronDown />
           </Icon>
         </Button>
       </Grid>

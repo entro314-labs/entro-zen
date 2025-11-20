@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import { Dialog as AriaDialog, DialogProps as AriaDialogProps } from 'react-aria-components';
 import classNames from 'classnames';
+import { Column } from './Column';
+import { Heading } from './Heading';
 import styles from './Dialog.module.css';
 
 interface DialogProps extends AriaDialogProps {
@@ -17,10 +19,10 @@ function Dialog({ title, variant = 'modal', children, className, ...props }: Dia
     >
       {dialogProps => {
         return (
-          <>
-            {title && <div className={styles.title}>{title}</div>}
+          <Column height="100%" gap>
+            {title && <Heading size="2">{title}</Heading>}
             {typeof children === 'function' ? children(dialogProps) : children}
-          </>
+          </Column>
         );
       }}
     </AriaDialog>
