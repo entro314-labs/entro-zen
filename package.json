@@ -1,8 +1,8 @@
 {
   "name": "@entro314labs/entro-zen",
-  "version": "0.200.3",
+  "version": "0.200.4",
   "description": "Modern, minimalist React component library based on react-zen from umami project",
-  "author": "Entro314 Labs <hey@entrolytics.click>",
+  "author": "Entrolytics <hey@entrolytics.click>",
   "license": "MIT",
   "homepage": "https://entrolytics.click",
   "repository": {
@@ -63,7 +63,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.6",
+    "@biomejs/biome": "^2.3.7",
     "@hyrious/esbuild-plugin-commonjs": "^0.2.6",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-commonjs": "^29.0.0",
@@ -74,7 +74,6 @@
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@umami/esbuild-plugin-css-modules": "0.4.0",
-    "@umami/shiso": "^0.55.0",
     "babel-plugin-inline-react-svg": "^2.0.2",
     "dts-bundle": "^0.7.3",
     "esbuild": "^0.27.0",
@@ -91,7 +90,7 @@
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-esbuild": "^6.2.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "stylelint": "^16.25.0",
+    "stylelint": "^16.26.0",
     "stylelint-config-recommended": "^17.0.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"

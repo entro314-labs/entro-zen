@@ -47,13 +47,13 @@ export default function MyApp() {
       <Button variant="primary" size="medium">
         Click me
       </Button>
-      
-      <Input 
+
+      <Input
         label="Email"
         type="email"
         placeholder="Enter your email"
       />
-      
+
       <Select>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
@@ -144,4 +144,4 @@ We welcome contributions! Please see our contributing guidelines for more detail
 
 MIT License - see the [LICENSE](LICENSE) file for details.
 
-Copyright (c) 2024 Entro314 Labs <hello@entrolytics.click>
+Copyright (c) 2024 Entrolytics <hello@entrolytics.click>

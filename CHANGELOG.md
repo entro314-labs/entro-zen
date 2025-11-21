@@ -19,13 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Rebranded from original zen library to Entro Zen
-- Updated copyright to Entro314 Labs
+- Updated copyright to Entrolytics
 - Enhanced package.json with proper metadata and scripts
 - Improved development workflow with pnpm
 
 ### Components
 - Button - Various styles and sizes with loading states
-- Input - Text inputs with validation and error states  
+- Input - Text inputs with validation and error states
 - Select - Dropdown selects with search support
 - Modal - Accessible modal dialogs
 - Form - Form components with validation
@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Browser Support
 - Chrome (latest)
-- Firefox (latest) 
+- Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
