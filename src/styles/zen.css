@@ -59,10 +59,10 @@
   --border-width-3: 4px;
   --border-width-4: 8px;
 
-  --border-radius-1: 2px;
-  --border-radius-2: 4px;
-  --border-radius-3: 8px;
-  --border-radius-4: 16px;
+  --border-radius-1: 4px;
+  --border-radius-2: 8px;
+  --border-radius-3: 12px;
+  --border-radius-4: 20px;
   --border-radius-full: 9999px;
 
   /* Shadows */
@@ -89,19 +89,25 @@
   --accent-color-crimson: #e93d82;
   --accent-color-pink: #d6409f;
   --accent-color-plum: #ab4aba;
-  --accent-color-purple: #8e4ec6;
-  --accent-color-violet: #6e56cf;
-  --accent-color-iris: #5b5bd6;
-  --accent-color-indigo: #3e63dd;
-  --accent-color-blue: #0090ff;
-  --accent-color-cyan: #00a2c7;
-  --accent-color-teal: #12a594;
+  --accent-color-purple: #6025ff;
+  --accent-color-violet: #5630fe;
+  --accent-color-iris: #4246fb;
+  --accent-color-indigo: #2e5cf8;
+  --accent-color-blue: #147bf3;
+  --accent-color-cyan: #00a1e1;
+  --accent-color-teal: #0097e6;
   --accent-color-jade: #29a383;
   --accent-color-green: #30a46c;
   --accent-color-grass: #46a758;
   --accent-color-lime: #bdee63;
   --accent-color-mint: #86ead4;
-  --accent-color-sky: #7ce2fe;
+  --accent-color-sky: #00a8dd;
+
+  /* Edge Blue brand palette */
+  --brand-cyan: #00a1e1;
+  --brand-blue: #147bf3;
+  --brand-indigo: #2e5cf8;
+  --brand-purple: #6025ff;
 
   /* Global settings */
 
@@ -164,8 +170,11 @@
   --outline-color: var(--base-color-10);
   --outline: var(--border-width) solid var(--outline-color);
 
-  --primary-color: var(--base-color-12);
-  --primary-font-color: var(--base-color-1);
+  --primary-color: var(--brand-blue);
+  --primary-font-color: #fff;
+
+  --secondary-color: var(--brand-cyan);
+  --secondary-font-color: #fff;
 
   --input-color: var(--base-color-3);
   --input-font-color: var(--font-color);
@@ -182,11 +191,14 @@
   --warning-color: var(--accent-color-orange);
   --warning-font-color: var(--base-color-1);
 
-  --active-color: var(--accent-color-blue);
-  --active-font-color: var(--base-color-1);
+  --active-color: var(--brand-blue);
+  --active-font-color: #fff;
 
   --inactive-color: var(--accent-color-gray);
   --inactive-font-color: var(--font-color);
+
+  --accent-color: var(--brand-indigo);
+  --accent-font-color: #fff;
 }
 
 html[data-theme='dark'], .dark-theme {
@@ -227,8 +239,11 @@ html[data-theme='dark'], .dark-theme {
   --outline-color: var(--base-color-10);
   --outline: var(--border-width) solid var(--outline-color);
 
-  --primary-color: var(--base-color-12);
-  --primary-font-color: var(--base-color-1);
+  --primary-color: var(--brand-blue);
+  --primary-font-color: #fff;
+
+  --secondary-color: var(--brand-cyan);
+  --secondary-font-color: #fff;
 
   --input-color: var(--base-color-3);
   --input-font-color: var(--font-color);
@@ -245,9 +260,12 @@ html[data-theme='dark'], .dark-theme {
   --warning-color: var(--accent-color-orange);
   --warning-font-color: var(--base-color-12);
 
-  --active-color: var(--accent-color-blue);
-  --active-font-color: var(--base-color-12);
+  --active-color: var(--brand-blue);
+  --active-font-color: #fff;
 
   --inactive-color: var(--accent-color-gray);
   --inactive-font-color: var(--base-color-12);
+
+  --accent-color: var(--brand-indigo);
+  --accent-font-color: #fff;
 }
