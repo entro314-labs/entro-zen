@@ -144,4 +144,4 @@ We welcome contributions! Please see our contributing guidelines for more detail
 
 MIT License - see the [LICENSE](LICENSE) file for details.
 
-Copyright (c) 2024 Entrolytics <hello@entrolytics.click>
+Copyright (c) 2024 Entrolytics <hey@entrolytics.click>
