@@ -36,7 +36,6 @@ export function ThemeButton({ className, variant = 'quiet', onPress, ...props }:
       onPress={handleClick}
     >
       {transitions((style, item) => (
-        // @ts-expect-error
         <animated.div key={item} style={style}>
           <Icon size="sm">{item === 'light' ? <Sun /> : <Moon />}</Icon>
         </animated.div>

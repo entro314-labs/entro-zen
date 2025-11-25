@@ -67,7 +67,6 @@ export function Toaster({ duration = 0, position = 'bottom-right' }: ToasterProp
         const { id, ...props } = item;
 
         return (
-          // @ts-expect-error
           <animated.div key={id} style={style}>
             <Toast {...props} id={id} onClose={() => removeToast(id)} />
           </animated.div>
