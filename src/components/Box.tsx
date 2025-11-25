@@ -1,31 +1,31 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import {
+import type { HTMLAttributes } from 'react';
+import type {
+  AlignSelf,
   BackgroundColor,
-  BorderColor,
   Border,
+  BorderColor,
   BorderRadius,
+  BorderWidth,
+  Bottom,
   BoxShadow,
-  Spacing,
-  Responsive,
-  Position,
   Display,
-  TextAlign,
   FlexGrow,
   FlexShrink,
-  Top,
-  Right,
-  Bottom,
-  Left,
-  Overflow,
-  AlignSelf,
-  JustifySelf,
   FontColor,
   FontSize,
   FontWeight,
-  Padding,
   HoverColor,
-  BorderWidth,
+  JustifySelf,
+  Left,
+  Overflow,
+  Padding,
+  Position,
+  Responsive,
+  Right,
+  Spacing,
+  TextAlign,
+  Top,
 } from '@/lib/types';
 import { useDesignProps } from './hooks/useDesignProps';
 import { Slot } from './Slot';

@@ -1,8 +1,8 @@
 'use client';
 
-import { FieldValues, useFormContext } from 'react-hook-form';
-import { PressEvent } from 'react-aria-components';
-import { Button, ButtonProps } from '../Button';
+import type { PressEvent } from 'react-aria-components';
+import { type FieldValues, useFormContext } from 'react-hook-form';
+import { Button, type ButtonProps } from '../Button';
 
 interface FormResetButtonProps extends ButtonProps {
   values?: FieldValues | { [p: string]: any };

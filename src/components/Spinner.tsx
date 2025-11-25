@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import type { HTMLAttributes } from 'react';
 import styles from './Spinner.module.css';
 
 export interface SpinnerProps extends HTMLAttributes<HTMLDivElement> {

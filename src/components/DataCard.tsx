@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import { Grid, type GridProps } from '@/components/Grid';
 import { Row } from '@/components/Row';
-import { Grid, GridProps } from '@/components/Grid';
 import { Text } from '@/components/Text';
 import { mapIdProperty } from '@/lib/utils';
 

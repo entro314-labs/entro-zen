@@ -1,4 +1,4 @@
-import { useRef, useState, ReactElement, useEffect } from 'react';
+import { type ReactElement, useEffect, useRef, useState } from 'react';
 import { Popover } from '@/components/index';
 import styles from './HoverTrigger.module.css';
 

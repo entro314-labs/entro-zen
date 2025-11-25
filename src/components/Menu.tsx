@@ -1,21 +1,21 @@
-import { ReactNode } from 'react';
+import classNames from 'classnames';
+import type { ReactNode } from 'react';
 import {
-  Header,
   Menu as AriaMenu,
   MenuItem as AriaMenuItem,
+  type MenuItemProps as AriaMenuItemProps,
+  type MenuProps as AriaMenuProps,
   MenuSection as AriaMenuSection,
-  MenuSectionProps as AriaMenuSectionProps,
-  MenuItemProps as AriaMenuItemProps,
-  MenuProps as AriaMenuProps,
+  type MenuSectionProps as AriaMenuSectionProps,
   SubmenuTrigger as AriaSubmenuTrigger,
-  SubmenuTriggerProps as AriaSubmenuTriggerProps,
+  type SubmenuTriggerProps as AriaSubmenuTriggerProps,
+  Header,
   Separator,
-  SeparatorProps,
+  type SeparatorProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
+import { IconLabel } from '@/components/IconLabel';
 import { Check, ChevronRight } from '@/components/icons';
 import { Icon } from './Icon';
-import { IconLabel } from '@/components/IconLabel';
 import styles from './Menu.module.css';
 
 export interface MenuProps extends AriaMenuProps<any> {

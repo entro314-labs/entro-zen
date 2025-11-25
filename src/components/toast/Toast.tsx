@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import type { HTMLAttributes } from 'react';
 import { Button } from '@/components/Button';
 import { Icon } from '@/components/Icon';
 import { X } from '@/components/icons';

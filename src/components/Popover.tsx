@@ -1,5 +1,8 @@
-import { Popover as AriaPopover, PopoverProps as AriaPopoverProps } from 'react-aria-components';
 import classNames from 'classnames';
+import {
+  Popover as AriaPopover,
+  type PopoverProps as AriaPopoverProps,
+} from 'react-aria-components';
 import styles from './Popover.module.css';
 
 export interface PopoverProps extends AriaPopoverProps {

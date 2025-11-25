@@ -1,9 +1,9 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { FontColor, StrokeColor, FillColor } from '@/lib/types';
+import type { HTMLAttributes } from 'react';
 import { useDesignProps } from '@/components/hooks/useDesignProps';
-import { Slot } from './Slot';
+import type { FillColor, FontColor, StrokeColor } from '@/lib/types';
 import styles from './Icon.module.css';
+import { Slot } from './Slot';
 
 export interface IconProps extends Omit<HTMLAttributes<HTMLElement>, 'color' | 'size'> {
   color?: FontColor;

@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
-import {
-  Breadcrumbs as AriaBreadcrumbs,
-  BreadcrumbsProps,
-  Breadcrumb as AriaBreadcrumb,
-  BreadcrumbProps,
-} from 'react-aria-components';
 import classNames from 'classnames';
+import type { ReactNode } from 'react';
+import {
+  Breadcrumb as AriaBreadcrumb,
+  Breadcrumbs as AriaBreadcrumbs,
+  type BreadcrumbProps,
+  type BreadcrumbsProps,
+} from 'react-aria-components';
 import { ChevronDown } from '@/components/icons';
-import { Icon } from './Icon';
 import styles from './Breadcrumbs.module.css';
+import { Icon } from './Icon';
 
 function Breadcrumbs({ children, className, ...props }: BreadcrumbsProps<any>) {
   return (

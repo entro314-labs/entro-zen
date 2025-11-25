@@ -1,11 +1,16 @@
 'use client';
 
-import { cloneElement, HTMLAttributes, Children } from 'react';
-import { useFormContext, RegisterOptions, UseFormReturn, FieldValues } from 'react-hook-form';
 import classNames from 'classnames';
+import { Children, cloneElement, type HTMLAttributes } from 'react';
+import {
+  type FieldValues,
+  type RegisterOptions,
+  type UseFormReturn,
+  useFormContext,
+} from 'react-hook-form';
 import { useFieldId } from '@/components/hooks/useFieldId';
-import { FormController } from './FormController';
 import { Label } from '../Label';
+import { FormController } from './FormController';
 import styles from './FormField.module.css';
 
 export interface FormFieldProps extends HTMLAttributes<HTMLDivElement>, Partial<UseFormReturn> {
@@ -42,7 +47,11 @@ export function FormField({
               if (!child) {
                 return null;
               }
-              return cloneElement(child, { ...field, id: fieldId, label: child?.props?.label || label });
+              return cloneElement(child, {
+                ...field,
+                id: fieldId,
+                label: child?.props?.label || label,
+              });
             },
           );
         }}

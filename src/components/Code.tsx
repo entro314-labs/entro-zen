@@ -1,7 +1,7 @@
-import { HTMLAttributes } from 'react';
-import { FontWeight, Responsive, TextWrap } from '@/lib/types';
-import { Slot } from './Slot';
+import type { HTMLAttributes } from 'react';
+import type { FontWeight, Responsive, TextWrap } from '@/lib/types';
 import styles from './Code.module.css';
+import { Slot } from './Slot';
 
 export interface CodeProps extends HTMLAttributes<HTMLElement> {
   asChild?: boolean;

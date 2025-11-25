@@ -1,6 +1,6 @@
-import esbuild from 'esbuild';
 import { commonjs } from '@hyrious/esbuild-plugin-commonjs';
 import cssModules from '@umami/esbuild-plugin-css-modules';
+import esbuild from 'esbuild';
 import svgr from 'esbuild-plugin-svgr';
 
 const nullImportPlugin = ({ matches = [] }) => ({

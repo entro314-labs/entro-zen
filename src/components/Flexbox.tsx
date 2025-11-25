@@ -1,18 +1,18 @@
 import classNames from 'classnames';
 import {
+  type AlignContent,
+  type AlignItems,
+  type FlexDirection,
+  type FlexDisplay,
+  type FlexWrap,
+  type Gap,
+  type JustifyContent,
+  type JustifyItems,
+  type Responsive,
   Spacing,
-  Responsive,
-  FlexDisplay,
-  FlexDirection,
-  FlexWrap,
-  JustifyContent,
-  JustifyItems,
-  AlignContent,
-  AlignItems,
-  Gap,
 } from '@/lib/types';
+import { Box, type BoxProps } from './Box';
 import { useDesignProps } from './hooks/useDesignProps';
-import { Box, BoxProps } from './Box';
 
 export interface FlexboxProps extends Omit<BoxProps, 'display' | 'gap'> {
   display?: Responsive<FlexDisplay>;

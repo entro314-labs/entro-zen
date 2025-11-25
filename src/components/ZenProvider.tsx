@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import { type Theme, useInitTheme } from '@/components/hooks/useTheme';
+import type { ToasterProps } from '@/components/toast/Toaster';
 import { ToastProvider } from '@/components/toast/ToastProvider';
-import { ToasterProps } from '@/components/toast/Toaster';
-import { useInitTheme, Theme } from '@/components/hooks/useTheme';
 
 const defaultToastConfig = {
   duration: 3000,

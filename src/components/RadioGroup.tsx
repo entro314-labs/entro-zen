@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
-import {
-  RadioGroup as AriaRadioGroup,
-  RadioGroupProps as AriaRadioGroupProps,
-  Radio as AriaRadio,
-  RadioProps,
-} from 'react-aria-components';
 import classNames from 'classnames';
+import type { ReactNode } from 'react';
+import {
+  Radio as AriaRadio,
+  RadioGroup as AriaRadioGroup,
+  type RadioGroupProps as AriaRadioGroupProps,
+  type RadioProps,
+} from 'react-aria-components';
 import { Label } from './Label';
 import styles from './RadioGroup.module.css';
 

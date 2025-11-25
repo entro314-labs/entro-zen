@@ -1,9 +1,9 @@
-import { useState, ChangeEvent, ReactNode } from 'react';
 import classNames from 'classnames';
-import { AlertDialog, AlertDialogProps } from './AlertDialog';
-import { TextField } from './TextField';
-import { Text } from './Text';
+import { type ChangeEvent, type ReactNode, useState } from 'react';
+import { AlertDialog, type AlertDialogProps } from './AlertDialog';
 import styles from './ConfirmationDialog.module.css';
+import { Text } from './Text';
+import { TextField } from './TextField';
 
 interface ConfirmationDialogProps extends AlertDialogProps {
   value: string;

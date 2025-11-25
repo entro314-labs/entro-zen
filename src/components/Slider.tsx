@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
+import classNames from 'classnames';
+import type { ReactNode } from 'react';
 import {
   Slider as AriaSlider,
-  SliderProps as AriaSliderProps,
+  type SliderProps as AriaSliderProps,
   SliderOutput,
   SliderThumb,
   SliderTrack,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import { Label } from './Label';
 import styles from './Slider.module.css';
 

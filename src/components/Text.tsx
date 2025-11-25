@@ -1,14 +1,14 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import {
-  Responsive,
-  TextAlign,
+import type { HTMLAttributes } from 'react';
+import type {
+  FontColor,
+  FontSize,
   FontWeight,
   LetterSpacing,
-  FontSize,
-  TextWrap,
+  Responsive,
+  TextAlign,
   TextTransform,
-  FontColor,
+  TextWrap,
 } from '@/lib/types';
 import { useDesignProps } from './hooks/useDesignProps';
 import { Slot } from './Slot';

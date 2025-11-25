@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Text, Row, Column, Button, Heading } from '@/components';
+import { Button, Column, Heading, Row, Text } from '@/components';
 
 export default function RootPage() {
   return (

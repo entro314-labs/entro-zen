@@ -1,4 +1,4 @@
-import { cloneElement, isValidElement, ReactElement, ReactNode } from 'react';
+import { cloneElement, isValidElement, type ReactElement, type ReactNode } from 'react';
 
 export function Slot({
   children,

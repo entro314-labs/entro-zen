@@ -1,11 +1,16 @@
 'use client';
 
-import { HTMLAttributes, ReactNode } from 'react';
-import { FieldValues, RegisterOptions, useFieldArray, useFormContext } from 'react-hook-form';
 import classNames from 'classnames';
+import type { HTMLAttributes, ReactNode } from 'react';
+import {
+  type FieldValues,
+  type RegisterOptions,
+  useFieldArray,
+  useFormContext,
+} from 'react-hook-form';
 import { useFieldId } from '@/components/hooks/useFieldId';
-import styles from './FormField.module.css';
 import { Label } from '../Label';
+import styles from './FormField.module.css';
 
 export interface FormFieldArrayProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
   name: string;

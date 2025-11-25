@@ -1,8 +1,8 @@
+import classNames from 'classnames';
 import {
   ProgressBar as AriaProgressBar,
-  ProgressBarProps as AriaProgressBarProps,
+  type ProgressBarProps as AriaProgressBarProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import styles from './ProgressBar.module.css';
 
 export interface ProgressBarProps extends AriaProgressBarProps {

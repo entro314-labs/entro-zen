@@ -1,8 +1,8 @@
-import { createElement, ReactNode } from 'react';
 import classNames from 'classnames';
+import { createElement, type ReactNode } from 'react';
 import { Info, TriangleAlert, X } from '@/components/icons';
-import { Icon } from './Icon';
 import styles from './AlertBanner.module.css';
+import { Icon } from './Icon';
 
 const AlertIcons = {
   error: TriangleAlert,

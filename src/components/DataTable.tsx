@@ -1,18 +1,24 @@
 import classNames from 'classnames';
-import { Children, createElement, HTMLAttributes, ReactElement, ReactNode } from 'react';
-import { TableProps } from 'react-aria-components';
-import { Grid } from '@/components/Grid';
+import {
+  Children,
+  createElement,
+  type HTMLAttributes,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
+import type { TableProps } from 'react-aria-components';
 import { DataCard } from '@/components/DataCard';
+import { Grid } from '@/components/Grid';
+import styles from './DataTable.module.css';
 import {
   Table,
-  TableHeader,
   TableBody,
-  TableColumn,
-  TableRow,
   TableCell,
-  TableCellProps,
+  type TableCellProps,
+  TableColumn,
+  TableHeader,
+  TableRow,
 } from './Table';
-import styles from './DataTable.module.css';
 
 export interface DataTableProps extends TableProps {
   data?: any[];
@@ -29,7 +35,7 @@ export function DataTable({
   ...props
 }: DataTableProps) {
   // Ensure data is always an array before processing
-  const safeData = Array.isArray(data) ? data : []
+  const safeData = Array.isArray(data) ? data : [];
 
   // We must map an id for react-aria
   // Check if items need IDs - either array is empty or first item lacks a valid id
@@ -88,29 +94,29 @@ export function DataTable({
       <TableBody>
         {items.map((row, index) => {
           // Generate a proper key for the row
-          let key: string
+          let key: string;
 
           try {
             if (rowKey) {
               if (typeof rowKey === 'function') {
-                key = rowKey(row, index) // Also pass index to function for fallback
+                key = rowKey(row, index); // Also pass index to function for fallback
               } else {
-                key = row?.[rowKey] // Safe property access
+                key = row?.[rowKey]; // Safe property access
               }
               // Fallback if key is null/undefined
               if (!key || key === 'undefined' || key === 'null') {
-                console.warn('DataTable: rowKey returned invalid value for row:', row)
-                key = `fallback-${index}-${Date.now()}`
+                console.warn('DataTable: rowKey returned invalid value for row:', row);
+                key = `fallback-${index}-${Date.now()}`;
               }
             } else {
-              key = row?.id || `item-${index}`
+              key = row?.id || `item-${index}`;
             }
 
             // Ensure key is always a string
-            key = String(key)
+            key = String(key);
           } catch (error) {
-            console.error('DataTable: Error generating row key:', error)
-            key = `error-fallback-${index}-${Date.now()}`
+            console.error('DataTable: Error generating row key:', error);
+            key = `error-fallback-${index}-${Date.now()}`;
           }
 
           return (

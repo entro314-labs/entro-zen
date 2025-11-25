@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import type { HTMLAttributes } from 'react';
 import styles from './Dots.module.css';
 
 export interface DotsProps extends HTMLAttributes<HTMLDivElement> {

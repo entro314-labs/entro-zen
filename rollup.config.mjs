@@ -1,13 +1,13 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import crypto from 'node:crypto';
+import path from 'node:path';
 import alias from '@rollup/plugin-alias';
-import postcss from 'rollup-plugin-postcss';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import svgr from '@svgr/rollup';
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
 import esbuild from 'rollup-plugin-esbuild';
-import svgr from '@svgr/rollup';
-import path from 'node:path';
-import crypto from 'node:crypto';
+import postcss from 'rollup-plugin-postcss';
 
 const md5 = str => crypto.createHash('md5').update(str).digest('hex');
 
@@ -51,7 +51,7 @@ export default {
       sourceMap: true,
       minimize: true,
       modules: {
-        generateScopedName: function (name, filename, css) {
+        generateScopedName: (name, filename, css) => {
           const file = path.basename(filename, '.css').replace('.module', '');
           const hash = Buffer.from(md5(`${name}:${filename}:${css}`))
             .toString('base64')

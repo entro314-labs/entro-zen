@@ -1,13 +1,13 @@
+import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import {
   TextField as AriaTextField,
-  TextFieldProps as AriaTextFieldProps,
-  TextArea,
+  type TextFieldProps as AriaTextFieldProps,
   Input,
+  TextArea,
 } from 'react-aria-components';
-import classNames from 'classnames';
-import { Label } from './Label';
 import { CopyButton } from './CopyButton';
+import { Label } from './Label';
 import styles from './TextField.module.css';
 
 export interface TextFieldProps extends AriaTextFieldProps {

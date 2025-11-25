@@ -10,35 +10,35 @@
   border-radius: var(--border-radius);
 }
 
-.tooltip[data-placement='top'] {
+.tooltip[data-placement="top"] {
   margin-bottom: 8px;
   --origin: translateY(4px);
 }
 
-.tooltip[data-placement='bottom'] {
+.tooltip[data-placement="bottom"] {
   margin-top: 8px;
   --origin: translateY(-4px);
 }
 
-.tooltip[data-placement='bottom'] .arrow svg {
+.tooltip[data-placement="bottom"] .arrow svg {
   transform: rotate(180deg);
 }
 
-.tooltip[data-placement='right'] {
+.tooltip[data-placement="right"] {
   margin-left: 8px;
   --origin: translateX(-4px);
 }
 
-.tooltip[data-placement='right'] .arrow svg {
+.tooltip[data-placement="right"] .arrow svg {
   transform: rotate(90deg);
 }
 
-.tooltip[data-placement='left'] {
+.tooltip[data-placement="left"] {
   margin-right: 8px;
   --origin: translateX(4px);
 }
 
-.tooltip[data-placement='left'] .arrow svg {
+.tooltip[data-placement="left"] .arrow svg {
   transform: rotate(-90deg);
 }
 

@@ -1,18 +1,13 @@
-import { useTransition, animated } from '@react-spring/web';
+import { animated, useTransition } from '@react-spring/web';
 import classNames from 'classnames';
-import { PressEvent } from 'react-aria-components';
-import { Sun, Moon } from '@/components/icons';
-import { Button, ButtonProps } from './Button';
-import { Icon } from './Icon';
+import type { PressEvent } from 'react-aria-components';
+import { Moon, Sun } from '@/components/icons';
+import { Button, type ButtonProps } from './Button';
 import { useTheme } from './hooks/useTheme';
+import { Icon } from './Icon';
 import styles from './ThemeButton.module.css';
 
-export function ThemeButton({
-  className,
-  variant = 'quiet',
-  onPress,
-  ...props
-}: ButtonProps) {
+export function ThemeButton({ className, variant = 'quiet', onPress, ...props }: ButtonProps) {
   const { theme, setTheme } = useTheme();
 
   const transitions = useTransition(theme, {
@@ -41,7 +36,7 @@ export function ThemeButton({
       onPress={handleClick}
     >
       {transitions((style, item) => (
-        // @ts-ignore
+        // @ts-expect-error
         <animated.div key={item} style={style}>
           <Icon size="sm">{item === 'light' ? <Sun /> : <Moon />}</Icon>
         </animated.div>

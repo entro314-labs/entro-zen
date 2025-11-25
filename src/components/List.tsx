@@ -1,21 +1,21 @@
+import classNames from 'classnames';
 import { Fragment, Key } from 'react';
 import {
-  ListBox,
-  ListBoxProps,
-  Separator,
-  SeparatorProps,
-  ListBoxSection,
-  ListBoxSectionProps,
   Header,
-  ListBoxItemProps,
+  ListBox,
   ListBoxItem,
-  Selection,
+  type ListBoxItemProps,
+  type ListBoxProps,
+  ListBoxSection,
+  type ListBoxSectionProps,
+  type Selection,
+  Separator,
+  type SeparatorProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
-import { Icon } from '@/components/Icon';
-import { Label } from '@/components/Label';
-import { Check } from '@/components/icons';
 import { useFieldId } from '@/components/hooks/useFieldId';
+import { Icon } from '@/components/Icon';
+import { Check } from '@/components/icons';
+import { Label } from '@/components/Label';
 import { getHighlightColor } from '@/lib/styles';
 import styles from './List.module.css';
 

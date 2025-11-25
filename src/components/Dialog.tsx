@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
-import { Dialog as AriaDialog, DialogProps as AriaDialogProps } from 'react-aria-components';
 import classNames from 'classnames';
+import type { ReactNode } from 'react';
+import { Dialog as AriaDialog, type DialogProps as AriaDialogProps } from 'react-aria-components';
 import { Column } from './Column';
-import { Heading } from './Heading';
 import styles from './Dialog.module.css';
+import { Heading } from './Heading';
 
 interface DialogProps extends AriaDialogProps {
   title?: ReactNode;

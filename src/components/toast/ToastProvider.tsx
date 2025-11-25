@@ -1,5 +1,5 @@
-import { createContext, ReactNode } from 'react';
-import { Toaster, ToasterProps } from '@/components/toast/Toaster';
+import { createContext, type ReactNode } from 'react';
+import { Toaster, type ToasterProps } from '@/components/toast/Toaster';
 
 export interface ToastProviderProps extends ToasterProps {
   children: ReactNode;

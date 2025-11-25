@@ -1,7 +1,7 @@
-import { Switch as AriaSwitch, SwitchProps as AriaSwitchProps } from 'react-aria-components';
 import classNames from 'classnames';
-import { Label } from './Label';
+import { Switch as AriaSwitch, type SwitchProps as AriaSwitchProps } from 'react-aria-components';
 import { Column } from './Column';
+import { Label } from './Label';
 import styles from './Switch.module.css';
 
 export interface SwitchProps extends AriaSwitchProps {

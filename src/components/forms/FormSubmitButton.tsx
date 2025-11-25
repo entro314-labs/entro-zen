@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormContext } from 'react-hook-form';
-import { LoadingButton, LoadingButtonProps } from '../LoadingButton';
+import { LoadingButton, type LoadingButtonProps } from '../LoadingButton';
 
 export function FormSubmitButton({
   variant = 'primary',

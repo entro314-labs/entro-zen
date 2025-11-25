@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import classNames from 'classnames';
+import type { ReactNode } from 'react';
 import styles from './StatusLight.module.css';
 
 interface StatusLightProps {

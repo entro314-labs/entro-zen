@@ -1,12 +1,12 @@
 'use client';
 
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import {
   Controller,
+  type ControllerFieldState,
   type ControllerProps,
   type ControllerRenderProps,
   type FieldValues,
-  type ControllerFieldState,
   type UseFormStateReturn,
 } from 'react-hook-form';
 

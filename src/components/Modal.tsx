@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import classNames from 'classnames';
+import type { ReactNode } from 'react';
 import {
   Modal as AriaModal,
   ModalOverlay as AriaModalOverlay,
-  ModalOverlayProps as AriaModalOverlayProps,
-  ModalRenderProps,
+  type ModalOverlayProps as AriaModalOverlayProps,
+  type ModalRenderProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import styles from './Modal.module.css';
 
 interface ModalProps extends AriaModalOverlayProps {
@@ -23,7 +23,7 @@ function Modal({
   ...props
 }: ModalProps) {
   if (offset) {
-    // @ts-ignore
+    // @ts-expect-error
     style[`--modal-offset`] = offset;
   }
 

@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { ToggleButton, ToggleButtonProps } from 'react-aria-components';
 import classNames from 'classnames';
+import type { ReactNode } from 'react';
+import { ToggleButton, type ToggleButtonProps } from 'react-aria-components';
 import { Label } from './Label';
 import styles from './Toggle.module.css';
 

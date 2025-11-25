@@ -1,10 +1,10 @@
-import { createContext, useContext, useState } from 'react';
 import classNames from 'classnames';
-import { Column, ColumnProps } from '@/components/Column';
-import { Row, RowProps } from '@/components/Row';
+import { createContext, useContext, useState } from 'react';
+import { Column, type ColumnProps } from '@/components/Column';
 import { Icon } from '@/components/Icon';
-import { Text } from '@/components/Text';
 import { ChevronDown } from '@/components/icons';
+import { Row, type RowProps } from '@/components/Row';
+import { Text } from '@/components/Text';
 import styles from './NavMenu.module.css';
 
 export interface NavMenuProps extends ColumnProps {

@@ -1,8 +1,8 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Check, Copy } from '@/components/icons';
-import { Icon } from './Icon';
 import styles from './CodeBlock.module.css';
+import { Icon } from './Icon';
 
 export function CodeBlock(props: any) {
   const textInput = useRef<any>(null);

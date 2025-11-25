@@ -1,5 +1,12 @@
 import classNames from 'classnames';
-import { TagGroup, TagGroupProps, TagList, Tag, TagProps, Selection } from 'react-aria-components';
+import {
+  type Selection,
+  Tag,
+  TagGroup,
+  type TagGroupProps,
+  TagList,
+  type TagProps,
+} from 'react-aria-components';
 import { Label } from './Label';
 import styles from './ToggleGroup.module.css';
 

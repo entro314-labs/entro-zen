@@ -161,11 +161,10 @@
 }
 .border-width-1 {
   border: var(--border-width-1) solid var(--border-color);
-
 }
 .border-width-2 {
   border: var(--border-width-2) solid var(--border-color);
-  }
+}
 .border-width-3 {
   border: var(--border-width-3) solid var(--border-color);
 }
@@ -1321,9 +1320,9 @@
   padding-right: var(--padding-x);
 }
 .padding-x-0 {
-   padding-left: 0;
-   padding-right: 0;
- }
+  padding-left: 0;
+  padding-right: 0;
+}
 .padding-x-1 {
   padding-left: var(--spacing-1);
   padding-right: var(--spacing-1);

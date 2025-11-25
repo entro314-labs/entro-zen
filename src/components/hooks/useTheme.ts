@@ -1,5 +1,5 @@
-import { create } from 'zustand';
 import { useLayoutEffect } from 'react';
+import { create } from 'zustand';
 
 export type Theme = 'light' | 'dark';
 
@@ -49,4 +49,3 @@ export function useInitTheme(preferred?: Theme, colorScheme?: 'light' | 'dark' |
     initTheme(preferred, colorScheme);
   }, [preferred, colorScheme, initTheme]);
 }
-

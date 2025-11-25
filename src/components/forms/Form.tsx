@@ -1,8 +1,14 @@
 'use client';
 
-import { useEffect, HTMLAttributes, ReactNode } from 'react';
-import { useForm, UseFormProps, SubmitHandler, FormProvider, UseFormReturn } from 'react-hook-form';
 import classNames from 'classnames';
+import { type HTMLAttributes, type ReactNode, useEffect } from 'react';
+import {
+  FormProvider,
+  type SubmitHandler,
+  type UseFormProps,
+  type UseFormReturn,
+  useForm,
+} from 'react-hook-form';
 import { AlertBanner } from '@/components/AlertBanner';
 import styles from './Form.module.css';
 

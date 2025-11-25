@@ -1,18 +1,18 @@
-import {
-  Cell,
-  CellProps,
-  Column,
-  ColumnProps,
-  Row,
-  RowProps,
-  Table as AriaTable,
-  TableProps,
-  TableBody as AriaTableBody,
-  TableBodyProps,
-  TableHeader as AriaTableHeader,
-  TableHeaderProps,
-} from 'react-aria-components';
 import classNames from 'classnames';
+import {
+  Table as AriaTable,
+  TableBody as AriaTableBody,
+  TableHeader as AriaTableHeader,
+  Cell,
+  type CellProps,
+  Column,
+  type ColumnProps,
+  Row,
+  type RowProps,
+  type TableBodyProps,
+  type TableHeaderProps,
+  type TableProps,
+} from 'react-aria-components';
 import styles from './Table.module.css';
 
 const gridTemplateColumns = 'repeat(auto-fit, minmax(140px, 1fr))';
@@ -27,11 +27,7 @@ interface TableCellProps extends CellProps {
 
 function Table({ children, className, ...props }: TableProps) {
   return (
-    <AriaTable
-      aria-label="Table"
-      {...props}
-      className={classNames(styles.table, className)}
-    >
+    <AriaTable aria-label="Table" {...props} className={classNames(styles.table, className)}>
       {children}
     </AriaTable>
   );
@@ -83,10 +79,7 @@ function TableColumn({ children, className, align, ...props }: TableColumnProps)
 
 function TableCell({ children, className, align, ...props }: TableCellProps) {
   return (
-    <Cell
-      {...props}
-      className={classNames(styles.cell, className, align && styles[align])}
-    >
+    <Cell {...props} className={classNames(styles.cell, className, align && styles[align])}>
       {children}
     </Cell>
   );

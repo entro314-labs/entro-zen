@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Box, BoxProps } from './Box';
+import { Box, type BoxProps } from './Box';
 import styles from './Container.module.css';
 
 export interface ContainerProps extends BoxProps {

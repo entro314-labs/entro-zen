@@ -1,5 +1,5 @@
-import { ProgressBar, ProgressBarProps } from 'react-aria-components';
 import classNames from 'classnames';
+import { ProgressBar, type ProgressBarProps } from 'react-aria-components';
 import styles from './ProgressCircle.module.css';
 
 export interface ProgressCircleProps extends ProgressBarProps {

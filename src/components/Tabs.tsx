@@ -1,12 +1,12 @@
 import {
-  Tabs as AriaTabs,
   Tab as AriaTab,
-  TabProps,
-  TabsProps,
-  TabPanel as AriaTabPanel,
-  TabPanelProps,
   TabList as AriaTabList,
-  TabListProps,
+  TabPanel as AriaTabPanel,
+  Tabs as AriaTabs,
+  type TabListProps,
+  type TabPanelProps,
+  type TabProps,
+  type TabsProps,
 } from 'react-aria-components';
 import styles from './Tabs.module.css';
 

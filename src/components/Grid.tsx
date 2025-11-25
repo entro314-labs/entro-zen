@@ -1,19 +1,19 @@
 import classNames from 'classnames';
-import {
-  GridDisplay,
-  GridAutoFlow,
-  Responsive,
-  GridTemplateRows,
-  GridTemplateColumns,
-  GridTemplateAreas,
+import type {
   AlignContent,
   AlignItems,
+  Gap,
+  GridAutoFlow,
+  GridDisplay,
+  GridTemplateAreas,
+  GridTemplateColumns,
+  GridTemplateRows,
   JustifyContent,
   JustifyItems,
-  Gap,
+  Responsive,
 } from '@/lib/types';
+import { Box, type BoxProps } from './Box';
 import { useDesignProps } from './hooks/useDesignProps';
-import { Box, BoxProps } from './Box';
 
 export interface GridProps extends Omit<BoxProps, 'display'> {
   display?: Responsive<GridDisplay>;

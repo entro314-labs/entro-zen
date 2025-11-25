@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Box, type BoxProps } from './Box';
 import { Dots } from './Dots';
-import { Spinner } from './Spinner';
 import styles from './Loading.module.css';
+import { Spinner } from './Spinner';
 
 export interface LoadingProps extends Omit<BoxProps, 'position'> {
   size?: 'sm' | 'md' | 'lg';

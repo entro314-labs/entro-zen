@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from './Button';
+import { Button, type ButtonProps } from './Button';
 import { Icon } from './Icon';
 import { Spinner } from './Spinner';
 

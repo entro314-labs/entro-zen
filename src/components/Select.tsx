@@ -1,20 +1,20 @@
-import { ReactNode, useState } from 'react';
-import {
-  PopoverProps,
-  Select as AriaSelect,
-  SelectProps as AriaSelectProps,
-  SelectValue,
-  SelectValueRenderProps,
-} from 'react-aria-components';
 import classNames from 'classnames';
+import { type ReactNode, useState } from 'react';
+import {
+  Select as AriaSelect,
+  type SelectProps as AriaSelectProps,
+  type PopoverProps,
+  SelectValue,
+  type SelectValueRenderProps,
+} from 'react-aria-components';
 import { ChevronDown } from '@/components/icons';
-import { Button, ButtonProps } from './Button';
-import { Label } from './Label';
-import { List, ListProps } from './List';
-import { Popover } from './Popover';
+import { Button, type ButtonProps } from './Button';
 import { Icon } from './Icon';
-import { SearchField } from './SearchField';
+import { Label } from './Label';
+import { List, type ListProps } from './List';
 import { Loading } from './Loading';
+import { Popover } from './Popover';
+import { SearchField } from './SearchField';
 import styles from './Select.module.css';
 
 export interface SelectProps extends AriaSelectProps<HTMLSelectElement> {

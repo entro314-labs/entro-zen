@@ -1,10 +1,10 @@
-import { HTMLAttributes } from 'react';
-import {
-  OverlayArrow,
-  Tooltip as AriaTooltip,
-  TooltipProps as AriaTooltipProps,
-} from 'react-aria-components';
 import classNames from 'classnames';
+import type { HTMLAttributes } from 'react';
+import {
+  Tooltip as AriaTooltip,
+  type TooltipProps as AriaTooltipProps,
+  OverlayArrow,
+} from 'react-aria-components';
 import styles from './Tooltip.module.css';
 
 interface TooltipProps extends AriaTooltipProps {

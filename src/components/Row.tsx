@@ -1,4 +1,4 @@
-import { Flexbox, FlexboxProps } from './Flexbox';
+import { Flexbox, type FlexboxProps } from './Flexbox';
 
 interface RowProps extends FlexboxProps {
   reverse?: boolean;

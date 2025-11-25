@@ -1,7 +1,7 @@
-import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { BorderRadius, BoxShadow, Responsive, ObjectFit } from '@/lib/types';
+import type { HTMLAttributes } from 'react';
 import { useDesignProps } from '@/components/hooks/useDesignProps';
+import type { BorderRadius, BoxShadow, ObjectFit, Responsive } from '@/lib/types';
 import styles from './Image.module.css';
 
 export interface ImageProps extends HTMLAttributes<HTMLImageElement> {

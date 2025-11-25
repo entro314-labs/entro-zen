@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import Script from 'next/script';
+import type { ReactNode } from 'react';
 import { inter } from '@/app/fonts';
 import { App } from './App';
 import '@/styles/zen.css';

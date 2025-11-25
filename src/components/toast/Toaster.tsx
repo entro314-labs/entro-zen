@@ -1,8 +1,8 @@
 import { animated, useTransition } from '@react-spring/web';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
-import { Toast } from '@/components/toast/Toast';
 import { removeToast, useToast } from '@/components/hooks/useToast';
+import { Toast } from '@/components/toast/Toast';
 import styles from './Toaster.module.css';
 
 export type ToastPosition =
@@ -67,7 +67,7 @@ export function Toaster({ duration = 0, position = 'bottom-right' }: ToasterProp
         const { id, ...props } = item;
 
         return (
-          // @ts-ignore
+          // @ts-expect-error
           <animated.div key={id} style={style}>
             <Toast {...props} id={id} onClose={() => removeToast(id)} />
           </animated.div>

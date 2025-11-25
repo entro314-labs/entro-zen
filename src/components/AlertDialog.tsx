@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
 import classNames from 'classnames';
-import { Dialog, DialogProps } from './Dialog';
-import { Column } from './Column';
-import { Row } from './Row';
-import { Button } from './Button';
+import type { ReactNode } from 'react';
 import styles from './AlertDialog.module.css';
+import { Button } from './Button';
+import { Column } from './Column';
+import { Dialog, type DialogProps } from './Dialog';
+import { Row } from './Row';
 
 export interface AlertDialogProps extends DialogProps {
   title?: ReactNode;

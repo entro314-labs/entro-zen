@@ -1,11 +1,11 @@
-import { ReactNode, createContext, useContext } from 'react';
 import classNames from 'classnames';
-import { TooltipTrigger, Focusable } from 'react-aria-components';
-import { Column, ColumnProps } from '@/components/Column';
-import { Row, RowProps } from '@/components/Row';
+import { createContext, type ReactNode, useContext } from 'react';
+import { Focusable, TooltipTrigger } from 'react-aria-components';
+import { Column, type ColumnProps } from '@/components/Column';
 import { Icon } from '@/components/Icon';
-import { Tooltip } from '@/components/Tooltip';
+import { Row, type RowProps } from '@/components/Row';
 import { Text } from '@/components/Text';
+import { Tooltip } from '@/components/Tooltip';
 import styles from './Sidebar.module.css';
 
 export interface SidebarProps extends ColumnProps {

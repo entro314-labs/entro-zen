@@ -1,8 +1,8 @@
 'use client';
-import { ReactNode } from 'react';
-import { Header } from '@/app/Header';
+import type { ReactNode } from 'react';
 import { Footer } from '@/app/Footer';
-import { ZenProvider, Container, Box, Column } from '@/components';
+import { Header } from '@/app/Header';
+import { Box, Column, Container, ZenProvider } from '@/components';
 
 export function App({ children }: { children: ReactNode }) {
   return (

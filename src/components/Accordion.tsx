@@ -1,17 +1,17 @@
-import { ReactElement, ReactNode, useState } from 'react';
+import classNames from 'classnames';
+import { type ReactElement, type ReactNode, useState } from 'react';
 import {
   Disclosure,
-  DisclosurePanel,
   DisclosureGroup,
-  DisclosureProps,
-  DisclosureGroupProps,
+  type DisclosureGroupProps,
+  DisclosurePanel,
+  type DisclosureProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import { ChevronDown } from '@/components/icons';
-import { Button } from './Button';
-import { Text } from './Text';
-import { Icon } from './Icon';
 import styles from './Accordion.module.css';
+import { Button } from './Button';
+import { Icon } from './Icon';
+import { Text } from './Text';
 
 export interface AccordionProps extends DisclosureGroupProps {
   type: 'single' | 'multiple';

@@ -1,11 +1,11 @@
+import classNames from 'classnames';
 import {
   Checkbox as AriaCheckbox,
-  CheckboxProps as AriaCheckboxProps,
+  type CheckboxProps as AriaCheckboxProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import { Check, Minus } from '@/components/icons';
-import { Icon } from './Icon';
 import styles from './Checkbox.module.css';
+import { Icon } from './Icon';
 
 export interface CheckboxProps extends AriaCheckboxProps {
   label?: string;

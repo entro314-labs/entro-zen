@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { TooltipBubble, TooltipBubbleProps } from '@/components/Tooltip';
+import { useEffect, useState } from 'react';
+import { TooltipBubble, type TooltipBubbleProps } from '@/components/Tooltip';
 import styles from './FloatingTooltip.module.css';
 
 export interface FloatingTooltipProps extends TooltipBubbleProps {}

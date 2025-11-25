@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { Row, type RowProps } from '@/components/Row';
+import type { ReactNode } from 'react';
 import { Icon, type IconProps } from '@/components/Icon';
+import { Row, type RowProps } from '@/components/Row';
 import { Text, type TextProps } from '@/components/Text';
 
 export interface IconLabelProps extends RowProps {

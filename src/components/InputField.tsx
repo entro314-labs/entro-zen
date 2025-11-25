@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
 import classNames from 'classnames';
-import { Label } from './Label';
-import { Box, BoxProps } from './Box';
-import { Slot } from './Slot';
+import type { ReactNode } from 'react';
+import { Box, type BoxProps } from './Box';
 import styles from './InputField.module.css';
+import { Label } from './Label';
+import { Slot } from './Slot';
 
 export interface InputFieldProps extends BoxProps {
   label?: string;

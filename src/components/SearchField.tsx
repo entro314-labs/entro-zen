@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import { useEffect, useState } from 'react';
 import {
   SearchField as AriaSearchField,
-  SearchFieldProps as AriaSearchFieldProps,
+  type SearchFieldProps as AriaSearchFieldProps,
   Input,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import { Search, X } from '@/components/icons';
 import { useDebounce } from './hooks/useDebounce';
-import { Label } from './Label';
 import { Icon } from './Icon';
+import { Label } from './Label';
 import styles from './TextField.module.css';
 
 export interface SearchFieldProps extends AriaSearchFieldProps {

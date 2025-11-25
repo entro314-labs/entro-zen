@@ -1,4 +1,4 @@
-import { Row, RowProps } from '../Row';
+import { Row, type RowProps } from '../Row';
 
 export interface FormButtonsProps extends RowProps {
   fill?: boolean;

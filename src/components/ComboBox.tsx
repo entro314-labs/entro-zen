@@ -1,19 +1,19 @@
-import { ReactNode } from 'react';
+import classNames from 'classnames';
+import type { ReactNode } from 'react';
 import {
   ComboBox as AriaComboBox,
-  ComboBoxProps as AriaComboBoxProps,
-  Input,
-  Popover,
+  type ComboBoxProps as AriaComboBoxProps,
   Button,
-  ListBoxRenderProps,
-  PopoverProps,
+  Input,
+  type ListBoxRenderProps,
+  Popover,
+  type PopoverProps,
 } from 'react-aria-components';
-import classNames from 'classnames';
 import { ChevronDown } from '@/components/icons';
-import { List, ListItem, ListProps } from './List';
-import { Icon } from './Icon';
-import { Grid } from './Grid';
 import styles from './ComboBox.module.css';
+import { Grid } from './Grid';
+import { Icon } from './Icon';
+import { List, ListItem, type ListProps } from './List';
 
 export interface ComboBoxProps extends AriaComboBoxProps<any> {
   items?: any[];
