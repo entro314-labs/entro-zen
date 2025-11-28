@@ -1,6 +1,6 @@
 {
   "name": "@entro314labs/entro-zen",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Modern, minimalist React component library based on react-zen from umami project",
   "keywords": [
     "entrolytics",
