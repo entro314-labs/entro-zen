@@ -50,7 +50,6 @@ export function FormField({
               return cloneElement(child, {
                 ...field,
                 id: fieldId,
-                label: child?.props?.label || label,
               });
             },
           );
