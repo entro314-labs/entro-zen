@@ -1,15 +1,14 @@
 import classNames from 'classnames';
-import {
-  type AlignContent,
-  type AlignItems,
-  type FlexDirection,
-  type FlexDisplay,
-  type FlexWrap,
-  type Gap,
-  type JustifyContent,
-  type JustifyItems,
-  type Responsive,
-  Spacing,
+import type {
+  AlignContent,
+  AlignItems,
+  FlexDirection,
+  FlexDisplay,
+  FlexWrap,
+  Gap,
+  JustifyContent,
+  JustifyItems,
+  Responsive,
 } from '@/lib/types';
 import { Box, type BoxProps } from './Box';
 import { useDesignProps } from './hooks/useDesignProps';

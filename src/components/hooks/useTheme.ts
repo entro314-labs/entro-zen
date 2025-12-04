@@ -22,7 +22,7 @@ function resolveTheme(preferred?: Theme, colorScheme?: 'light' | 'dark' | 'syste
   return 'light';
 }
 
-export const useTheme = create<ThemeState>((set, get) => ({
+export const useTheme = create<ThemeState>((set, _get) => ({
   theme: 'light',
   setTheme: theme => {
     set({ theme });

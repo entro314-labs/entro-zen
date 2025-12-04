@@ -1,4 +1,4 @@
-import { fromDate, getLocalTimeZone } from '@internationalized/date';
+import { getLocalTimeZone } from '@internationalized/date';
 import classNames from 'classnames';
 import {
   Calendar as AriaCalendar,

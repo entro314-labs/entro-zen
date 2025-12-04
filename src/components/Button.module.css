@@ -32,7 +32,7 @@
 }
 
 .button.variant-primary {
-  color: var(--primary-font-color) !important;
+  color: var(--primary-font-color);
   background: var(--primary-color);
 }
 

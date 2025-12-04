@@ -157,6 +157,6 @@ export interface DataColumnProps extends Omit<HTMLAttributes<any>, 'children'> {
   children?: ReactNode | ((row: any, index: number) => void);
 }
 
-export function DataColumn(props: DataColumnProps) {
+export function DataColumn(_props: DataColumnProps) {
   return null;
 }

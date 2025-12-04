@@ -33,7 +33,7 @@ export function HoverTrigger({
     }
   }, [isOpen]);
 
-  const close = () => setOpen(false);
+  const _close = () => setOpen(false);
 
   const handleMouseEnter = () => {
     isOverMenu.current = false;

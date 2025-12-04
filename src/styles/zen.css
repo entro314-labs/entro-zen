@@ -113,7 +113,7 @@
   /* Global settings */
 
   --font-family: Inter;
-  --font-family-code: "JetBrains Mono";
+  --font-family-code: 'JetBrains Mono';
   --font-size: var(--font-size-3);
 
   --heading-size: var(--heading-size-3);
@@ -202,7 +202,7 @@
   --accent-font-color: #fff;
 }
 
-html[data-theme="dark"],
+html[data-theme='dark'],
 .dark-theme {
   --base-color-1: #111111;
   --base-color-2: #191919;

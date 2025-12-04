@@ -10,11 +10,11 @@
   gap: var(--spacing-3);
 }
 
-.radiogroup[data-orientation="vertical"] .inputs {
+.radiogroup[data-orientation='vertical'] .inputs {
   flex-direction: column;
 }
 
-.radiogroup[data-orientation="horizontal"] .inputs {
+.radiogroup[data-orientation='horizontal'] .inputs {
   flex-direction: row;
 }
 
@@ -28,12 +28,12 @@
 }
 
 .radiogroup.variant-circle {
-  &[data-orientation="horizontal"] .inputs {
+  &[data-orientation='horizontal'] .inputs {
     gap: var(--spacing-6);
   }
 
   & .radio:before {
-    content: "";
+    content: '';
     display: block;
     width: 20px;
     height: 20px;

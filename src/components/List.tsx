@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Fragment, Key } from 'react';
+import { Fragment } from 'react';
 import {
   Header,
   ListBox,

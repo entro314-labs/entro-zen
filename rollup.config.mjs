@@ -76,7 +76,7 @@ export default {
     esbuild(),
   ],
   external,
-  onwarn(warning, warn) {
+  onwarn(_warning, _warn) {
     // Ignore all warnings
   },
 };
